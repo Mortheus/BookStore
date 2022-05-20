@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="0.0" prefWidth="601.0">
+         <children>
+            <ImageView fitHeight="119.0" fitWidth="422.0" layoutX="245.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bookcover.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="119.0" fitWidth="422.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bookcover.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="380.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="221.0" layoutY="20.0" text="BookStore">
+               <font>
+                  <Font name="Impact" size="40.0" />
+               </font>
+            </Label>
+            <Label layoutX="77.0" layoutY="87.0" text="Username">
+               <font>
+                  <Font name="JetBrains Mono Medium" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="77.0" layoutY="128.0" text="Password">
+               <font>
+                  <Font name="JetBrains Mono Medium" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tf_username" layoutX="200.0" layoutY="86.0" prefHeight="26.0" prefWidth="246.0" />
+            <TextField fx:id="tf_password" layoutX="200.0" layoutY="127.0" prefHeight="26.0" prefWidth="246.0" />
+            <ChoiceBox fx:id="cb_role" layoutX="200.0" layoutY="168.0" prefHeight="26.0" prefWidth="246.0" />
+            <Label layoutX="99.0" layoutY="169.0" text="Role">
+               <font>
+                  <Font name="JetBrains Mono Medium" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="179.0" layoutY="234.0" text="Already a member?">
+               <font>
+                  <Font name="JetBrains Mono Medium" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="button_log_in" layoutX="340.0" layoutY="229.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Log In!">
+               <font>
+                  <Font name="JetBrains Mono Medium" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="button_signup" layoutX="293.0" layoutY="203.0" mnemonicParsing="false" text="Sign Up" />
+         </children></AnchorPane>
+   </children>
+</VBox>
