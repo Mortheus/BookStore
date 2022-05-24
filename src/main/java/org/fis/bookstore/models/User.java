@@ -56,6 +56,7 @@ public class User {
         return this.comenzi;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
