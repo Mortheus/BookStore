@@ -8,14 +8,14 @@
 
 <AnchorPane prefHeight="471.0" prefWidth="647.0" style="-fx-background-color: #EAE5DE;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.FIS2021.controllers.HomepageClientController">
     <children>
-      <Pane prefHeight="120.0" prefWidth="143.0" style="-fx-background-color: #C4995C;">
-         <children>
-            <ImageView fitHeight="74.0" fitWidth="110.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@logo.png" />
-               </image></ImageView>
-         </children>
-      </Pane>
+        <Pane prefHeight="120.0" prefWidth="143.0" style="-fx-background-color: #C4995C;">
+            <children>
+                <ImageView fitHeight="74.0" fitWidth="110.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@logo.png" />
+                    </image></ImageView>
+            </children>
+        </Pane>
         <Pane layoutY="67.0" prefHeight="424.0" prefWidth="143.0" style="-fx-background-color: #C4995C;">
             <children>
                 <Line endX="8.600006103515625" layoutX="121.0" layoutY="60.0" startX="-100.0" />
@@ -29,12 +29,12 @@
                         <Font name="Microsoft PhagsPa Bold" size="16.0" />
                     </font>
                 </Label>
-                <Button fx:id="butonShoppingCart" layoutX="13.0" layoutY="222.0" mnemonicParsing="false" onAction="#handleShoppingCart" style="-fx-background-color: #C8A166;" text="SHOPPING CART">
+                <Button fx:id="idBookstore" layoutX="20.0" layoutY="222.0" mnemonicParsing="false" onAction="#handleShoppingCart" prefHeight="23.0" prefWidth="102.0" style="-fx-background-color: #C8A166;" text="Book Store">
                     <font>
                         <Font name="Verdana" size="12.0" />
                     </font>
                 </Button>
-                <Button fx:id="butonLogOut" layoutX="17.0" layoutY="295.0" mnemonicParsing="false" onAction="#handleLoginAction" prefHeight="23.0" prefWidth="110.0" style="-fx-background-color: #C8A166;" text="LOG OUT">
+                <Button fx:id="butonLogOut" layoutX="17.0" layoutY="295.0" mnemonicParsing="false" onAction="#handleLoginAction" prefHeight="23.0" prefWidth="102.0" style="-fx-background-color: #C8A166;" text="LOG OUT">
                     <font>
                         <Font name="Verdana" size="12.0" />
                     </font>
@@ -46,22 +46,8 @@
                 </Button>
             </children>
         </Pane>
-        <Label layoutX="157.0" layoutY="237.0" prefHeight="28.0" prefWidth="69.0" text="Book:">
-            <font>
-                <Font name="Comic Sans MS" size="20.0" />
-            </font></Label>
-        <Label layoutX="157.0" layoutY="282.0" prefHeight="38.0" prefWidth="102.0" text="Quantity: ">
-            <font>
-                <Font name="Comic Sans MS" size="20.0" />
-            </font></Label>
-        <TextField fx:id="idBook" layoutX="264.0" layoutY="238.0" />
-        <TextField fx:id="cantitate" layoutX="264.0" layoutY="288.0" />
 
-        <Button layoutX="157.0" layoutY="337.0" mnemonicParsing="false" onAction="#handleAddToCart" style="-fx-background-color: #C8A166;" text="Add to cart" />
-        <Label layoutX="157.0" layoutY="379.0" prefHeight="30.0" prefWidth="110.0" text="Total price:">
-            <font>
-                <Font name="Comic Sans MS" size="20.0" />
-            </font></Label>
+        <Button layoutX="355.0" layoutY="334.0" mnemonicParsing="false" onAction="#handleAddToCart" style="-fx-background-color: #C8A166;" text="Place Order" />
         <Text fx:id="total" layoutX="267.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="117.009765625">
             <font>
                 <Font size="15.0" />
