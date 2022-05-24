@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fis.bookstore.controllers.RegisterController">
    <children>
       <AnchorPane prefHeight="0.0" prefWidth="601.0">
          <children>
@@ -38,9 +38,9 @@
                   <Font name="JetBrains Mono Medium" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="tf_username" layoutX="200.0" layoutY="86.0" prefHeight="26.0" prefWidth="246.0" />
-            <TextField fx:id="tf_password" layoutX="200.0" layoutY="127.0" prefHeight="26.0" prefWidth="246.0" />
-            <ChoiceBox fx:id="cb_role" layoutX="200.0" layoutY="168.0" prefHeight="26.0" prefWidth="246.0" />
+            <TextField fx:id="usernameField" layoutX="200.0" layoutY="86.0" prefHeight="26.0" prefWidth="246.0" />
+            <PasswordField fx:id="passwordField" layoutX="200.0" layoutY="127.0" prefHeight="26.0" prefWidth="246.0" />
+            <ChoiceBox fx:id="role" layoutX="200.0" layoutY="168.0" prefHeight="26.0" prefWidth="246.0" />
             <Label layoutX="99.0" layoutY="169.0" text="Role">
                <font>
                   <Font name="JetBrains Mono Medium" size="18.0" />
@@ -51,12 +51,13 @@
                   <Font name="JetBrains Mono Medium" size="14.0" />
                </font>
             </Label>
-            <Button fx:id="button_log_in" layoutX="340.0" layoutY="229.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Log In!">
+            <Button layoutX="340.0" layoutY="229.0" mnemonicParsing="false" onAction="#loadLoginPage" style="-fx-background-color: transparent;" text="Log In!">
                <font>
                   <Font name="JetBrains Mono Medium" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="button_signup" layoutX="293.0" layoutY="203.0" mnemonicParsing="false" text="Sign Up" />
+            <Button layoutX="293.0" layoutY="203.0" mnemonicParsing="false" onAction="#handleRegisterAction" text="Sign Up" />
          </children></AnchorPane>
+      <Text fx:id="registrationMessage" fill="#e51313" layoutX="130.0" layoutY="338.0" wrappingWidth="228.39999999999998" GridPane.columnIndex="2" GridPane.rowIndex="7" />
    </children>
 </VBox>
