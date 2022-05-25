@@ -37,8 +37,7 @@ public class HomepageClientController {
     @FXML
     private Text bookError;
 
-    @FXML
-    private Text outOfStock;
+
 
 
     public void setUser(User user)
@@ -89,6 +88,7 @@ public class HomepageClientController {
     private void handleAddToCart() {
 
         try {
+
             if(BookService.getBook(idBook.getText()) != null) {
                 Book p =(BookService.getBook(idBook.getText()));
                 cosCumparaturi.add(new Book(p.getAutor(), p.getNume(),p.getPret(),Integer.parseInt(cantitate.getText())));
