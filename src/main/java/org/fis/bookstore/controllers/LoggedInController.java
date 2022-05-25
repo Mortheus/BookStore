@@ -94,7 +94,7 @@ public class LoggedInController {
         try {
             Stage stage = (Stage) loginMessage.getScene().getWindow();
             Parent registerRoot = FXMLLoader.load(getClass().getResource("/HomepageManager.fxml"));
-            Scene scene = new Scene(registerRoot, 600, 400);
+            Scene scene = new Scene(registerRoot, 640, 480);
             stage.setTitle("Book Store - Home page for manager");
             stage.setScene(scene);
         } catch (IOException e) {
