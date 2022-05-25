@@ -1,8 +1,12 @@
 package org.fis.bookstore.models;
 
+import org.dizitart.no2.objects.Id;
+
 public class Book {
 
+    @Id
     private String nume;
+
     private String autor;
     private int pret;
     private int cantitate;
@@ -13,7 +17,9 @@ public class Book {
         this.cantitate = cantitate;
         this.pret = pret;
     }
+    public Book(){
 
+    }
     public void setNume(String nume) {
         this.nume = nume;
     }

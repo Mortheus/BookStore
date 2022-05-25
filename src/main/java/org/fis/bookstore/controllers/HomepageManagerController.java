@@ -10,12 +10,15 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.fis.bookstore.Main;
+import org.fis.bookstore.exceptions.BookNotFoundException;
 import org.fis.bookstore.models.Book;
 import org.fis.bookstore.models.User;
 import org.fis.bookstore.services.BookService;
 
 import java.io.IOException;
 import java.util.ArrayList;
+
+import static org.fis.bookstore.services.BookService.managerRemoveBook;
 
 public class HomepageManagerController {
     @FXML
@@ -57,7 +60,20 @@ public class HomepageManagerController {
 
         mesaj.setText("Cartea a fost adaugata cu succes!");
     }
+    @FXML
+    private void removeBook() {
+        try {
+            if (BookService.getBook(BookName.getText())!= null) {
+                Book p = BookService.getBook(BookName.getText());
+                managerRemoveBook(p);
 
+            }
+            mesaj.setText("Cartea a fost eliminata cu succes!");
+        } catch (BookNotFoundException e) {
+            return;
+        }
+
+    }
     @FXML
 
     private void handleLoginAction() {

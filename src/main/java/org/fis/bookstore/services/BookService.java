@@ -37,4 +37,10 @@ public class BookService {
         }
         throw new BookNotFoundException(nume);
     }
+
+    public static void managerRemoveBook(Book book){
+        BookRepository.remove(book);
+    }
+
+
 }
