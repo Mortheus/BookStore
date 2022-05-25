@@ -38,8 +38,20 @@ public class BookService {
         throw new BookNotFoundException(nume);
     }
 
+
     public static void managerRemoveBook(Book book){
         BookRepository.remove(book);
+    }
+
+
+    public static ArrayList<Book> getAllBooks() {
+
+        ArrayList<Book> result = new ArrayList<>();
+        for(Book b : BookRepository.find()){
+            result.add(b);
+        }
+
+        return result;
     }
 
 

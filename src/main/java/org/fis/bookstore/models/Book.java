@@ -17,6 +17,7 @@ public class Book {
         this.cantitate = cantitate;
         this.pret = pret;
     }
+    
     public Book(){
 
     }

@@ -48,15 +48,15 @@ public class HomepageClientController {
     @FXML
     private ListView myView;
 
-    /*public void initialize() {
-        ArrayList<Book> orders = BookService.getAllBooksShop();
+   @FXML
+    public void initialize() {
+        ArrayList<Book> orders = BookService.getAllBooks();
         System.out.println(orders);
         for (Book o : orders) {
             myView.getItems().add(o.toString());
         }
 
-    }*/
-
+    }
 
 
     @FXML
