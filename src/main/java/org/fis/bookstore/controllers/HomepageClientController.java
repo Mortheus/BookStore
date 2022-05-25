@@ -64,7 +64,7 @@ public class HomepageClientController {
         try {
             Stage stage = (Stage) butonLogOut.getScene().getWindow();
             Parent loginRoot = FXMLLoader.load(getClass().getResource("/login.fxml"));
-            Scene scene = new Scene(loginRoot, 640, 480);
+            Scene scene = new Scene(loginRoot, 600, 400);
             stage.setTitle("Book Store -login");
             stage.setScene(scene);
         } catch (IOException e) {
