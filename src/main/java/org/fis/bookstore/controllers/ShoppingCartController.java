@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 public class ShoppingCartController {
     @FXML
-    private Button butonLogOut;
+    private Button butonOrder;
     @FXML
     private Button butonHomepageClient;
     @FXML
@@ -59,15 +59,16 @@ public class ShoppingCartController {
         }
         ListaProduse.setText(s);
         total.setText(t+" lei");
+        t=0;
     }
 
     @FXML
     public void placeOrder() {
         try {
-            Stage stage = (Stage) butonLogOut.getScene().getWindow();
+            Stage stage = (Stage) butonOrder.getScene().getWindow();
             Parent loginRoot = FXMLLoader.load(getClass().getResource("/PlaceOrder.fxml"));
             Scene scene = new Scene(loginRoot, 640, 480);
-            stage.setTitle("Plant Store -PlaceOrder");
+            stage.setTitle("Book Store - PlaceOrder");
             stage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();

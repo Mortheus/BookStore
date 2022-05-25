@@ -3,6 +3,7 @@ package org.fis.bookstore.models;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import org.dizitart.no2.objects.Id;
 
 import java.util.ArrayList;
 
@@ -10,6 +11,7 @@ public class Comanda {
 
     private String nrTel;
     private String adresa;
+    @Id
     private String username;
     private String status;
     private ArrayList<Book> listbooks;
@@ -22,6 +24,9 @@ public class Comanda {
         this.username=username;
         this.listbooks=listbooks;
         this.status=status;
+
+    }
+    public Comanda(){
 
     }
 
