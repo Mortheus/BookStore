@@ -6,7 +6,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="471.0" prefWidth="647.0" style="-fx-background-color: #EAE5DE;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.FIS2021.controllers.HomepageClientController">
+<AnchorPane prefHeight="471.0" prefWidth="647.0" style="-fx-background-color: #EAE5DE;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fis.bookstore.controllers.PlaceOrderController">
     <children>
         <Pane prefHeight="120.0" prefWidth="143.0" style="-fx-background-color: #C4995C;">
             <children>
@@ -34,11 +34,6 @@
                         <Font name="Verdana" size="12.0" />
                     </font>
                 </Button>
-                <Button fx:id="butonLogOut" layoutX="17.0" layoutY="295.0" mnemonicParsing="false" onAction="#handleLoginAction" prefHeight="23.0" prefWidth="110.0" style="-fx-background-color: #C8A166;" text="LOG OUT">
-                    <font>
-                        <Font name="Verdana" size="12.0" />
-                    </font>
-                </Button>
                 <Button layoutX="21.0" layoutY="259.0" mnemonicParsing="false" style="-fx-background-color: #C8A166;" text="PAST ORDERS">
                     <font>
                         <Font name="Verdana" size="12.0" />
@@ -56,8 +51,8 @@
             </font></Label>
         <TextField fx:id="nrTel" layoutX="398.0" layoutY="135.0" />
         <TextField fx:id="adresa" layoutX="398.0" layoutY="191.0" />
-        <Button layoutX="274.0" layoutY="352.0" mnemonicParsing="false" onAction="#handlePlaceOrder" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: #C8A166;" text="Place Order" />
-        <Label layoutX="184.0" layoutY="256.0" text="Total:">
+        <Button layoutX="274.0" layoutY="352.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: #C8A166;" text="Place Order" />
+        <Label fx:id="total" layoutX="184.0" layoutY="256.0" text="Total:">
             <font>
                 <Font name="Comic Sans MS" size="20.0" />
             </font></Label>
@@ -66,7 +61,7 @@
             <font>
                 <Font size="20.0" />
             </font></Text>
-        <Button layoutX="436.0" layoutY="352.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: #C8A166;" text="Empty Cart" />
+        <Button fx:id="emptyCart" layoutX="436.0" layoutY="352.0" mnemonicParsing="false" onAction="#handleEmptyCart" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: #C8A166;" text="Empty Cart" />
 
 
     </children>
