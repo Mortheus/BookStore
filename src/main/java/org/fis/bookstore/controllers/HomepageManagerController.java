@@ -31,7 +31,7 @@ public class HomepageManagerController {
     @FXML
     private TextField Price;
     @FXML
-    private TextField Author;
+    private TextField AutorName;
     @FXML
     private TextField Quantity;
     @FXML
@@ -44,19 +44,21 @@ public class HomepageManagerController {
     }
 
     @FXML
-    private void handleAddPlant()  {
+    private void handleAddBook()  {
 
-        Book p=new Book(BookName.getText(),Author.getText(), Integer.parseInt(Price.getText()),Integer.parseInt(Quantity.getText()));
-        BookService.getBook(p);
+        Book p=new Book(BookName.getText(),AutorName.getText(), Integer.parseInt(Price.getText()),Integer.parseInt(Quantity.getText()));
+        BookService.managerAddBook(p);
         System.out.println(p.toString());
         BookName.setText("");
-        Author.setText("");
+        AutorName.setText("");
         Price.setText("");
         Quantity.setText("");
 
 
         mesaj.setText("Cartea a fost adaugata cu succes!");
     }
+
+    @FXML
 
     private void handleLoginAction() {
         try {

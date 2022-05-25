@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.fis.bookstore.models.User;
+import org.fis.bookstore.services.BookService;
 import org.fis.bookstore.services.FileSystemService;
 import org.fis.bookstore.services.UserService;
 
@@ -21,9 +22,9 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         initDirectory();
         UserService.initDatabase();
-       // Comandaservice.initDatabase();
-        //BookService.initDatabase();
-        Parent root = FXMLLoader.load(getClass().getResource("/login.fxml"));
+        BookService.initDatabase();
+        // Comandaservice.initDatabase();
+        Parent root = FXMLLoader.load(getClass().getResource("/sign-up.fxml"));
         stage.setTitle("Book Store - Registration");
         stage.setScene(new Scene(root, 600, 400));
         stage.show();
