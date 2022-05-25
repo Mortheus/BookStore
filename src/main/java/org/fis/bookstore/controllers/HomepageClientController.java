@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 import org.fis.bookstore.exceptions.BookNotFoundException;
 import org.fis.bookstore.models.Book;
 import org.fis.bookstore.models.User;
-
+import org.fis.bookstore.services.BookService;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -36,8 +36,7 @@ public class HomepageClientController {
     @FXML
     private Text bookError;
 
-    @FXML
-    private Text outOfStock;
+
 
 
     public void setUser(User user)
@@ -78,7 +77,7 @@ public class HomepageClientController {
             Stage stage = (Stage) butonShoppingCart.getScene().getWindow();
             Parent loginRoot = FXMLLoader.load(getClass().getResource("/ShoppingCart.fxml"));
             Scene scene = new Scene(loginRoot, 640, 480);
-            stage.setTitle("Plant Store - Shopping Cart");
+            stage.setTitle("Book Store - Shopping Cart");
             stage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();
@@ -88,11 +87,11 @@ public class HomepageClientController {
     private void handleAddToCart() {
 
         try {
-            if(BookService.getAutor(idBook.getText()) != null) {
-                Book p =(BookService.getAutor(idBook.getText()));
+            if(Book.getBook(idBook.getText()) != null) {
+                Book p =(BookService.getBook(idBook.getText()));
                 cosCumparaturi.add(new Book(p.getAutor(), p.getNume(),p.getPret(),Integer.parseInt(cantitate.getText())));
-                System.out.println(BookService.getPlantProvider(idBook.getText()).getNume());
-                t=t+BookService.getAutor(idBook.getText()).getPret()*Integer.parseInt(cantitate.getText());
+                System.out.println(BookService.getBook(idBook.getText()).getNume());
+                t=t+BookService.getBook(idBook.getText()).getPret()*Integer.parseInt(cantitate.getText());
                 total.setText(String.valueOf(t));
             }
 
