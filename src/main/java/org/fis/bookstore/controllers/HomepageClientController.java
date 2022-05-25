@@ -91,10 +91,14 @@ public class HomepageClientController {
 
             if(BookService.getBook(idBook.getText()) != null) {
                 Book p =(BookService.getBook(idBook.getText()));
-                cosCumparaturi.add(new Book(p.getAutor(), p.getNume(),p.getPret(),Integer.parseInt(cantitate.getText())));
-                System.out.println(BookService.getBook(idBook.getText()).getNume());
-                t=t+BookService.getBook(idBook.getText()).getPret()*Integer.parseInt(cantitate.getText());
-                total.setText(String.valueOf(t));
+                if(p.getCantitate()<Integer.parseInt(cantitate.getText())){
+                    bookError.setText("Not enough copies!");
+                }else{
+                    cosCumparaturi.add(new Book(p.getAutor(), p.getNume(),p.getPret(),Integer.parseInt(cantitate.getText())));
+                    System.out.println(BookService.getBook(idBook.getText()).getNume());
+                    t=t+BookService.getBook(idBook.getText()).getPret()*Integer.parseInt(cantitate.getText());
+                    total.setText(String.valueOf(t));
+                }
             }
 
         }
@@ -102,5 +106,6 @@ public class HomepageClientController {
             bookError.setText("Book does not exist!");
             return;
         }
+
     }
 }
