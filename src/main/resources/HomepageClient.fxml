@@ -29,12 +29,14 @@
                         <Font name="Microsoft PhagsPa Bold" size="16.0" />
                     </font>
                 </Label>
+
                 <Button fx:id="butonShoppingCart" layoutX="13.0" layoutY="222.0" mnemonicParsing="false"  style="-fx-background-color: #C8A166;" text="SHOPPING CART">
                     <font>
                         <Font name="Verdana" size="12.0" />
                     </font>
                 </Button>
                 <Button fx:id="butonLogOut" layoutX="17.0" layoutY="295.0" mnemonicParsing="false"  prefHeight="23.0" prefWidth="110.0" style="-fx-background-color: #C8A166;" text="LOG OUT">
+
                     <font>
                         <Font name="Verdana" size="12.0" />
                     </font>
@@ -57,7 +59,9 @@
         <TextField fx:id="idBook" layoutX="264.0" layoutY="238.0" />
         <TextField fx:id="cantitate" layoutX="264.0" layoutY="288.0" />
 
+
         <Button layoutX="157.0" layoutY="337.0" mnemonicParsing="false"  style="-fx-background-color: #C8A166;" text="Add to cart" />
+
         <Label layoutX="157.0" layoutY="379.0" prefHeight="30.0" prefWidth="110.0" text="Total price:">
             <font>
                 <Font name="Comic Sans MS" size="20.0" />
@@ -73,6 +77,6 @@
         <ListView fx:id="myView" layoutX="182.0" layoutY="14.0" prefHeight="200.0" prefWidth="436.0">
 
         </ListView>
-
+        <Text fx:id="bookError" fill="#ea1919" layoutX="388.0" layoutY="454.0" wrappingWidth="229.00001448392868" GridPane.columnIndex="1" GridPane.rowIndex="6" />
     </children>
 </AnchorPane>

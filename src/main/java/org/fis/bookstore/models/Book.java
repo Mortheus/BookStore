@@ -46,7 +46,7 @@ public class Book {
     @Override
     public String toString()
     {
-        return "Planta:"+
+        return "Book:"+
                 "nume " + nume +
                 ", autor " + autor +
                 ", pret " + pret +
