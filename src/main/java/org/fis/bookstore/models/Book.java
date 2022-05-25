@@ -14,6 +14,10 @@ public class Book {
         this.pret = pret;
     }
 
+    public Book(){
+
+    }
+
     public void setNume(String nume) {
         this.nume = nume;
     }
