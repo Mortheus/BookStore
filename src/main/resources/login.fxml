@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fis.bookstore.controllers.LoggedInController">
     <children>
         <AnchorPane prefHeight="0.0" prefWidth="601.0">
             <children>
@@ -38,19 +38,20 @@
                         <Font name="JetBrains Mono Medium" size="18.0" />
                     </font>
                 </Label>
-                <TextField fx:id="tf_username" layoutX="200.0" layoutY="100.0" prefHeight="25.0" prefWidth="243.0" />
-                <TextField fx:id="tf_password" layoutX="200.0" layoutY="140.0" prefHeight="25.0" prefWidth="243.0" />
+                <TextField fx:id="usernameField" layoutX="200.0" layoutY="100.0" prefHeight="25.0" prefWidth="243.0" />
+                <PasswordField fx:id="passwordField" layoutX="200.0" layoutY="140.0" prefHeight="25.0" prefWidth="243.0" />
                 <Label layoutX="200.0" layoutY="224.0" text="Not a user?">
                     <font>
                         <Font name="JetBrains Mono Medium" size="14.0" />
                     </font>
                 </Label>
-                <Button fx:id="button_sign_up" layoutX="313.0" layoutY="219.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Sign up!">
+                <Button fx:id="button_sign_up" layoutX="313.0" layoutY="219.0" mnemonicParsing="false" onAction="#loadRegisterPage" style="-fx-background-color: transparent;" text="Sign up!">
                     <font>
                         <Font name="JetBrains Mono Medium" size="14.0" />
                     </font>
                 </Button>
-                <Button fx:id="button_login" layoutX="290.0" layoutY="179.0" mnemonicParsing="false" text="Login" />
+                <Button layoutX="290.0" layoutY="179.0" mnemonicParsing="false" onAction="#handleLoginAction" text="Login" />
             </children></AnchorPane>
+        <Text fx:id="loginMessage" fill="#ea1919" layoutX="116.0" layoutY="387.0" wrappingWidth="229.00001448392868" GridPane.columnIndex="1" GridPane.rowIndex="6" />
     </children>
 </VBox>

@@ -80,8 +80,8 @@ public class LoggedInController {
     public void HomepageClient(){
         try {
             Stage stage = (Stage) loginMessage.getScene().getWindow();
-            Parent registerRoot = FXMLLoader.load(getClass().getResource("/FXML/HomepageClient.fxml"));
-            Scene scene = new Scene(registerRoot, 600, 400);
+            Parent registerRoot = FXMLLoader.load(getClass().getResource("/HomepageClient.fxml"));
+            Scene scene = new Scene(registerRoot, 640, 480);
             stage.setTitle("Book Store - Home page for client");
             stage.setScene(scene);
         } catch (IOException e) {
@@ -93,7 +93,7 @@ public class LoggedInController {
     public void HomepageManager(){
         try {
             Stage stage = (Stage) loginMessage.getScene().getWindow();
-            Parent registerRoot = FXMLLoader.load(getClass().getResource("/FXML/HomepageManager.fxml"));
+            Parent registerRoot = FXMLLoader.load(getClass().getResource("/HomepageManager.fxml"));
             Scene scene = new Scene(registerRoot, 600, 400);
             stage.setTitle("Book Store - Home page for manager");
             stage.setScene(scene);
