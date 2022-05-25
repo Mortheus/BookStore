@@ -6,7 +6,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="471.0" prefWidth="647.0" style="-fx-background-color: #EAE5DE;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.FIS2021.controllers.HomepageClientController">
+<AnchorPane prefHeight="471.0" prefWidth="647.0" style="-fx-background-color: #EAE5DE;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fis.bookstore.controllers.ShoppingCartController">
     <children>
         <Pane prefHeight="120.0" prefWidth="143.0" style="-fx-background-color: #C4995C;">
             <children>
@@ -29,12 +29,7 @@
                         <Font name="Microsoft PhagsPa Bold" size="16.0" />
                     </font>
                 </Label>
-                <Button fx:id="idBookstore" layoutX="20.0" layoutY="222.0" mnemonicParsing="false" onAction="#handleShoppingCart" prefHeight="23.0" prefWidth="102.0" style="-fx-background-color: #C8A166;" text="Book Store">
-                    <font>
-                        <Font name="Verdana" size="12.0" />
-                    </font>
-                </Button>
-                <Button fx:id="butonLogOut" layoutX="17.0" layoutY="295.0" mnemonicParsing="false" onAction="#handleLoginAction" prefHeight="23.0" prefWidth="102.0" style="-fx-background-color: #C8A166;" text="LOG OUT">
+                <Button fx:id="butonHomepageClient" layoutX="20.0" layoutY="222.0" mnemonicParsing="false" onAction="#handleHomepageClient" prefHeight="23.0" prefWidth="102.0" style="-fx-background-color: #C8A166;" text="Book Store">
                     <font>
                         <Font name="Verdana" size="12.0" />
                     </font>
@@ -47,7 +42,8 @@
             </children>
         </Pane>
 
-        <Button layoutX="355.0" layoutY="334.0" mnemonicParsing="false" onAction="#handleAddToCart" style="-fx-background-color: #C8A166;" text="Place Order" />
+        <Button layoutX="355.0" layoutY="334.0" mnemonicParsing="false" style="-fx-background-color: #C8A166;" text="Place Order" />
+        <TextArea fx:id="ListaProduse" layoutX="157.0" layoutY="14.0" prefHeight="200" prefWidth="470" />
         <Text fx:id="total" layoutX="267.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="117.009765625">
             <font>
                 <Font size="15.0" />
@@ -56,9 +52,9 @@
             <font>
                 <Font size="20.0" />
             </font></Text>
-        <ListView fx:id="myView" layoutX="182.0" layoutY="14.0" prefHeight="200.0" prefWidth="436.0">
 
-        </ListView>
+
+
 
     </children>
 </AnchorPane>
