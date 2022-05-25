@@ -4,6 +4,7 @@ import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.Cursor;
 import org.dizitart.no2.objects.ObjectRepository;
 import org.dizitart.no2.objects.filters.ObjectFilters;
+import org.fis.bookstore.exceptions.BookNotFoundException;
 import org.fis.bookstore.models.Book;
 
 import java.util.ArrayList;
@@ -23,5 +24,17 @@ public class BookService {
                 .openOrCreate("test", "test");
         BookRepository = database.getRepository(Book.class);
 
+    }
+
+    public static void managerAddBook(Book book) {
+        BookRepository.insert(book);
+    }
+
+    public static Book getBook(String nume) throws BookNotFoundException {
+        Cursor<Book> cursor = BookRepository.find(ObjectFilters.eq("nume", nume));
+        for (Book b : cursor){
+            return b;
+        }
+        throw new BookNotFoundException(nume);
     }
 }

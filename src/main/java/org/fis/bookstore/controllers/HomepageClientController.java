@@ -13,6 +13,7 @@ import org.fis.bookstore.exceptions.BookNotFoundException;
 import org.fis.bookstore.models.Book;
 import org.fis.bookstore.models.User;
 import org.fis.bookstore.services.BookService;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -47,14 +48,14 @@ public class HomepageClientController {
     @FXML
     private ListView myView;
 
-    public void initialize() {
+    /*public void initialize() {
         ArrayList<Book> orders = BookService.getAllBooksShop();
         System.out.println(orders);
         for (Book o : orders) {
             myView.getItems().add(o.toString());
         }
 
-    }
+    }*/
 
 
 
@@ -87,7 +88,8 @@ public class HomepageClientController {
     private void handleAddToCart() {
 
         try {
-            if(Book.getBook(idBook.getText()) != null) {
+
+            if(BookService.getBook(idBook.getText()) != null) {
                 Book p =(BookService.getBook(idBook.getText()));
                 cosCumparaturi.add(new Book(p.getAutor(), p.getNume(),p.getPret(),Integer.parseInt(cantitate.getText())));
                 System.out.println(BookService.getBook(idBook.getText()).getNume());

@@ -6,7 +6,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="471.0" prefWidth="647.0" style="-fx-background-color: #EAE5DE;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.FIS2021.controllers.HomepageClientController">
+<AnchorPane prefHeight="471.0" prefWidth="647.0" style="-fx-background-color: #EAE5DE;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <Pane prefHeight="120.0" prefWidth="143.0" style="-fx-background-color: #C4995C;">
             <children>
@@ -29,11 +29,6 @@
                         <Font name="Microsoft PhagsPa Bold" size="16.0" />
                     </font>
                 </Label>
-                <Button fx:id="butonShoppingCart" layoutX="13.0" layoutY="222.0" mnemonicParsing="false" onAction="#handleShoppingCart" style="-fx-background-color: #C8A166;" text="SHOPPING CART">
-                    <font>
-                        <Font name="Verdana" size="12.0" />
-                    </font>
-                </Button>
                 <Button fx:id="butonLogOut" layoutX="17.0" layoutY="295.0" mnemonicParsing="false" onAction="#handleLoginAction" prefHeight="23.0" prefWidth="110.0" style="-fx-background-color: #C8A166;" text="LOG OUT">
                     <font>
                         <Font name="Verdana" size="12.0" />
