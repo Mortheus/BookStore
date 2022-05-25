@@ -49,7 +49,7 @@ public class HomepageClientController {
     private ListView myView;
 
    @FXML
-    public void initialize() {
+   public void initialize() {
         ArrayList<Book> orders = BookService.getAllBooks();
         System.out.println(orders);
         for (Book o : orders) {

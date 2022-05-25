@@ -29,7 +29,11 @@ public class PlaceOrderController {
     @FXML
     private Text mesaj;
     @FXML
-    private Button butonLogOut;
+    private Button butonShoppingCart;
+    @FXML
+    private Button butonPastOrders;
+    @FXML
+    private Button emptyCart;
     @FXML
     private User user;
     @FXML
@@ -39,31 +43,40 @@ public class PlaceOrderController {
 
 
     @FXML
-    public void handleHomePage(){
+    public void handleShoppingCart(){
         try {
-            Stage stage = (Stage) butonLogOut.getScene().getWindow();
-            Parent registerRoot = FXMLLoader.load(getClass().getResource("/HomepageClient.fxml"));
+            Stage stage = (Stage) butonShoppingCart.getScene().getWindow();
+            Parent registerRoot = FXMLLoader.load(getClass().getResource("/ShoppingCart.fxml"));
             Scene scene = new Scene(registerRoot, 640, 480);
-            CartService.golireCos();
             stage.setTitle("Book Store - Home page for client");
             stage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    public void handleCancel(){
-        CartService.golireCos();
-
-    }
 
     @FXML
-    private void handleLoginAction(){
+    private void handlePastOrders(){
         try {
-            Stage stage = (Stage) butonLogOut.getScene().getWindow();
+            Stage stage = (Stage) butonPastOrders.getScene().getWindow();
             Parent loginRoot = FXMLLoader.load(getClass().getResource("/login.fxml"));
             Scene scene = new Scene(loginRoot, 640, 480);
             stage.setTitle("Book Store -login");
             stage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void handleEmptyCart(){
+        try {
+            Stage stage = (Stage) emptyCart.getScene().getWindow();
+            Parent loginRoot = FXMLLoader.load(getClass().getResource("/HomepageClient.fxml"));
+            Scene scene = new Scene(loginRoot, 640, 480);
+            stage.setTitle("Book Store - Homepage Client");
+            stage.setScene(scene);
+            CartService.golireCos();
         } catch (IOException e) {
             e.printStackTrace();
         }
