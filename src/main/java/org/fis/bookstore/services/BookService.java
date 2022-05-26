@@ -43,6 +43,10 @@ public class BookService {
         BookRepository.remove(book);
     }
 
+    public static void managerUpdateBook(Book book){
+        BookRepository.update(book);
+    }
+
 
     public static ArrayList<Book> getAllBooks() {
 
