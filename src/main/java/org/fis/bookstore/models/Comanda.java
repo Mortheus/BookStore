@@ -11,7 +11,6 @@ public class Comanda {
 
     private String nrTel;
     private String adresa;
-    @Id
     private String username;
     private String status;
     private ArrayList<Book> listbooks;
@@ -45,7 +44,7 @@ public class Comanda {
     public String getStatus(){
         return status;
     }
-    public void setBook( ArrayList<Book> listaplante)
+    public void setBook( ArrayList<Book> listbooks)
     {
         this.listbooks=listbooks;
     }
@@ -55,6 +54,17 @@ public class Comanda {
 
     public String getNrTel() {
         return nrTel;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Comanda:"+
+                "nume " + username +
+                ", nrTel " + nrTel +
+                ", adresa " + adresa +
+                ", status " + status +
+                ", books  " + listbooks;
     }
 
 

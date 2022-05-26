@@ -4,8 +4,9 @@ import java.util.ArrayList;
 
 public class User {
 
-    private String username;
+
     private String password;
+    private String username;
     private String role;
     private ArrayList<Book> books;
     private ArrayList<Comanda> comenzi;
@@ -45,6 +46,7 @@ public class User {
         this.role = role;
     }
     public void addBooks(Book b) { books.add(b); }
+    public void addComanda(Comanda c){ comenzi.add(c); }
 
     public ArrayList<Book>getBooks()
     {
