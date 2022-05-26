@@ -27,8 +27,8 @@ import static org.fis.bookstore.services.FileSystemService.getPathToFile;
             return database;
         }
 
-        public static void addComanda(String nrTel, String adresa,String username, String status,ArrayList<Book> booklist) {
-            comandaRepository.insert(new Comanda(nrTel, adresa , username, status, booklist));
+        public static void addComanda(Comanda o) {
+            comandaRepository.insert(o);
         }
 
 
