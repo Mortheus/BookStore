@@ -11,9 +11,14 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.fis.bookstore.Main;
+import org.fis.bookstore.exceptions.UserNotFoundException;
 import org.fis.bookstore.models.Book;
+import org.fis.bookstore.models.Comanda;
 import org.fis.bookstore.models.User;
+import org.fis.bookstore.services.BookService;
 import org.fis.bookstore.services.CartService;
+import org.fis.bookstore.services.ComandaService;
+import org.fis.bookstore.services.UserService;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -27,6 +32,8 @@ public class PlaceOrderController {
     @FXML
     private TextArea ListaProd;
     @FXML
+    private TextField username;
+    @FXML
     private Text mesaj;
     @FXML
     private Button butonShoppingCart;
@@ -34,6 +41,8 @@ public class PlaceOrderController {
     private Button butonPastOrders;
     @FXML
     private Button emptyCart;
+    @FXML
+    private Button placeOrder;
     @FXML
     private User user;
     @FXML
@@ -80,5 +89,23 @@ public class PlaceOrderController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    private void handlePlaceOrder(){
+        try {
+            User s = UserService.getUser(username.getText());
+            Comanda p=new Comanda(nrTel.getText(),adresa.getText(),username.getText(),"Pending",s.getBooks());
+            s.addComanda(p);
+            p.setBook(s.getBooks());
+            for(Comanda c : s.getComenzi()) {
+                System.out.println(c);
+            }
+        }catch( UserNotFoundException e){
+            mesaj.setText("nu a fost gasit user");
+            return;
+        }
+
+        mesaj.setText("Ordered placed with success!");
     }
 }

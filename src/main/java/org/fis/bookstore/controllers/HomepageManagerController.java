@@ -24,6 +24,8 @@ public class HomepageManagerController {
     @FXML
     private Button butonLogOut;
     @FXML
+    private Button buttonEditBook;
+    @FXML
     private Text mesaj;
     @FXML
     private TextField BookName;
@@ -76,7 +78,7 @@ public class HomepageManagerController {
         try {
             Stage stage = (Stage) butonLogOut.getScene().getWindow();
             Parent loginRoot = FXMLLoader.load(getClass().getResource("/login.fxml"));
-            Scene scene = new Scene(loginRoot, 640, 480);
+            Scene scene = new Scene(loginRoot, 600, 400);
             stage.setTitle("Book Store -login");
             stage.setScene(scene);
         } catch (IOException e) {
@@ -90,6 +92,20 @@ public class HomepageManagerController {
             Parent loginRoot = FXMLLoader.load(getClass().getResource("/Orders.fxml"));
             Scene scene = new Scene(loginRoot, 640, 480);
             stage.setTitle("Book Store -login");
+            stage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+
+    private void editBook() {
+        try {
+            Stage stage = (Stage) buttonEditBook.getScene().getWindow();
+            Parent loginRoot = FXMLLoader.load(getClass().getResource("/EditBook.fxml"));
+            Scene scene = new Scene(loginRoot, 640, 480);
+            stage.setTitle("Book Store - Edit Book");
             stage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();

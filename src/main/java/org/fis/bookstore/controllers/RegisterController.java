@@ -34,7 +34,7 @@ public class RegisterController {
     public void handleRegisterAction() {
         try {
             if(!usernameField.getText().trim().isEmpty() && !passwordField.getText().trim().isEmpty() && role.getValue() != null) {
-                UserService.addUser(usernameField.getText(), passwordField.getText(), (String) role.getValue());
+                UserService.addUser(usernameField.getText(), passwordField.getText(), (String) role.getValue(), passwordField.getText());
                 registrationMessage.setText("Account created successfully!");
             }
             else {

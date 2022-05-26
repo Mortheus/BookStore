@@ -37,13 +37,13 @@ public class Book {
         return autor;
     }
 
-    public void setPret(){
+    public void setPret(int pret){
         this.pret = pret;
     }
     public int getPret(){
         return pret;
     }
-    public void setCantitate(){
+    public void setCantitate(int cantitate){
         this.cantitate = cantitate;
     }
     public int getCantitate(){
