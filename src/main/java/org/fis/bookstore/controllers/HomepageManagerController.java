@@ -24,10 +24,6 @@ public class HomepageManagerController {
     @FXML
     private Button butonLogOut;
     @FXML
-    private Button butonAddedPlants;
-    @FXML
-    private Button butonAddPlant;
-    @FXML
     private Text mesaj;
     @FXML
     private TextField BookName;
@@ -80,6 +76,18 @@ public class HomepageManagerController {
         try {
             Stage stage = (Stage) butonLogOut.getScene().getWindow();
             Parent loginRoot = FXMLLoader.load(getClass().getResource("/login.fxml"));
+            Scene scene = new Scene(loginRoot, 640, 480);
+            stage.setTitle("Book Store -login");
+            stage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void handleOrdersAction() {
+        try {
+            Stage stage = (Stage) butonLogOut.getScene().getWindow();
+            Parent loginRoot = FXMLLoader.load(getClass().getResource("/Orders.fxml"));
             Scene scene = new Scene(loginRoot, 640, 480);
             stage.setTitle("Book Store -login");
             stage.setScene(scene);
